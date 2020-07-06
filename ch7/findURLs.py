@@ -5,10 +5,11 @@ import pyperclip, re
 
 urlRegex = re.compile(r'''(
     (http://|https://)?     # protocol
-    (www.)?
-    [a-zA-Z0-9-]+           # site name
+    (www\.)?
+    ([a-zA-Z0-9-]+)           # site name
     (\.[a-zA-Z]{2,4})       # dot something
     (\.[a-zA-Z]{2,4})?      # optional dot something
+    (/[a-zA-Z.-]+)?
 )''', re.VERBOSE)
 
 text = str(pyperclip.paste())
