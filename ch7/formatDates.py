@@ -4,6 +4,7 @@
 import pyperclip, re
 
 dateRegex = re.compile(r'''(
+<<<<<<< HEAD
     (\d{1,4})    # First number
     (\.|-|/)            # Separator
     (\d{1,2})              # Second number
@@ -25,3 +26,15 @@ if len(matches) > 0:
     print('\n'.join(matches))
 else:
     print('No dates found.')
+=======
+    ^(\d{1,2}|\d{1,4})    # First number
+    (\s|\.|-)            # Separator
+    (\d{1,2})              # Second number
+    (\s|\.|-)            # Separator
+    (\d{1,2}|\d{1,4})    # Third number
+)''', re.VERBOSE)
+
+#TODO: Find matches in clipboard text and re-format
+
+#TODO: Copy results to the clipboard
+>>>>>>> f51c025bfec0074b42b6ed5d07a723b4509b3e8c
