@@ -1,5 +1,5 @@
 import re
 
-nonSpaceReg = re.compile(r'[\S]')
-
 #TODO: Write function to isolate regex characters
+def regexStrip(text, removing=' '):
+    removingReg = re.compile(r'[%]')
