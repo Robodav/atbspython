@@ -31,7 +31,7 @@ def checkDate(date):
     elif month == 2:
         if day > 28:
             if day == 29: # February 29 only on leap years
-                if not (year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
+                if not (year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)):
                     return False
             else:
                 return False
@@ -40,5 +40,6 @@ def checkDate(date):
             return False
     return True
 
-text = "01/01/1999, 02/03/2000, 05/20/1970, 2/4/40, 09/09/0004"
+text = "01/01/1999, 02/03/2000, 05/20/1970, 2/4/40, 09/09/0004, \
+    29/02/2003, 29/02/2004, 29/02/1600, 31/04/1999, 32/12/1998"
 dateDetection(text)
