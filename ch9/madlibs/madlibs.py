@@ -5,7 +5,7 @@ from pathlib import Path
 import pyinputplus as pyip
 
 #Read mad libs text file
-selection = pyip.inputMenu(['1', '2', '3']
+selection = pyip.inputMenu(['1', '2', '3'])
 madlibFile = open(Path.cwd() / f'madlibs{selection}.txt')
 madlibContent = madlibFile.read()
 
