@@ -3,12 +3,16 @@
 
 from pathlib import Path
 import pyinputplus as pyip
+import re
 
-#Read mad libs text file
+# Read mad libs text file
 selection = pyip.inputMenu(['1', '2', '3'])
 madlibFile = open(Path.cwd() / f'madlibs{selection}.txt')
 madlibContent = madlibFile.read()
 
-#TODO: Find replacement occurrences and prompt user to write over them
+# Find replacement occurrences and prompt user to write over them
+replacementRegex = re.compile(r'''(NOUN|ADJECTIVE|VERB|ADVERB)''')
+splitLib = replacementRegex.split(madlibContent)
+
 
 #TODO: Print results to screen and save to new text file
