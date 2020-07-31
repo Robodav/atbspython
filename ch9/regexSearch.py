@@ -9,6 +9,7 @@ import re
 directory = Path(pyip.inputFilepath(prompt='Enter a valid directory:\n', mustExist=True))
 textFiles = list(directory.glob('*.txt'))
 
-#TODO: Get a regex input from the user
+# Get a regex input from the user
+reg = pyip.inputRegexStr(prompt='Enter a regex to match:\n')
 
 #TODO: Find all matches in all text documents and print to the screen
