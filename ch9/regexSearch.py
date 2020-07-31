@@ -2,7 +2,12 @@
 # regexSearch.py - Opens all .txt files in a folder and searches for any line
 #                  that matches a user-specified regex
 
-#TODO: Open a specified directory
+from pathlib import Path
+import pyinputplus as pyip
+import re
+# Find all text files in a specified directory
+directory = Path(pyip.inputFilepath(prompt='Enter a valid directory:\n', mustExist=True))
+textFiles = list(directory.glob('*.txt'))
 
 #TODO: Get a regex input from the user
 
