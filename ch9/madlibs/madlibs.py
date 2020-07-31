@@ -13,6 +13,12 @@ madlibContent = madlibFile.read()
 # Find replacement occurrences and prompt user to write over them
 replacementRegex = re.compile(r'''(NOUN|ADJECTIVE|VERB|ADVERB)''')
 splitLib = replacementRegex.split(madlibContent)
-
+modifiedLib = ""
+for word in splitLib:
+    if word not in ["NOUN", "ADJECTIVE", "VERB", "ADVERB"]:
+        modifiedLib += word
+    else:
+        replacement = pyip.inputStr(f'Enter a(n) {word.lower()}:\n') # Prompt user with part of speech
+        modifiedLib += replacement
 
 #TODO: Print results to screen and save to new text file
