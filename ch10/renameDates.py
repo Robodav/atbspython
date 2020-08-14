@@ -16,16 +16,16 @@ datePattern = re.compile(r"""^(.*?) # all text before the date
 for amerFilename in os.listdir('.'):
     mo = datePattern.search(amerFilename)
 
-# Skip files without a date
-if mo == None:
-    continue
+    # Skip files without a date
+    if mo == None:
+        continue
 
-# Get the different parts of the filename
-beforePart = mo.group(1)
-monthPart = mo.group(2)
-dayPart = mo.group(4)
-yearPart = mo.group(6)
-afterPart = mo.group(8)
+    # Get the different parts of the filename
+    beforePart = mo.group(1)
+    monthPart = mo.group(2)
+    dayPart = mo.group(4)
+    yearPart = mo.group(6)
+    afterPart = mo.group(8)
 
 # TODO: Form the European-style filename
 
