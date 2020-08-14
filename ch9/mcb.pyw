@@ -18,7 +18,7 @@ if len(sys.argv) == 3:
         if sys.argv[2] == '*':
             mcbShelf.clear()
         else:
-            del mcbShelf[sys.argv[2].lower()].lower()
+            mcbShelf.pop(sys.argv[2].lower(), None)
 elif len(sys.argv) == 2:
     # List keywords and load content
     if sys.argv[1].lower() == 'list':
