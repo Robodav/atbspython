@@ -18,7 +18,8 @@ def backupToZip(folder):
             break
         number = number + 1
 
-    # TODO: Create the ZIP file.
+    # Create the ZIP file.
+    print(f'Creating {zipFilename}...')
 
     # TODO: Walk the entire folder tree and compress the files in each folder.
     print('Done.')
