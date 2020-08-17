@@ -9,5 +9,11 @@ import pyinputplus as pyip
 # Get walking directory and min file size from user
 walking = pyip.inputFilepath(prompt='Enter the directory to search:\n', mustExist=True)
 fileSize = pyip.inputNum(prompt='Enter the minimum file size (mb):\n')
+fileSize = fileSize * 1000000 # convert to bytes
 
-# TODO: Walk directory and print file paths to screen
+# Walk directory and print file paths to screen
+for root, dirs, files in os.walk(walking):
+    for f in files:
+        checkPath = Path(root) / f
+        if os.path.getsize(checkPath) >= fileSize:
+            print(checkPath)
