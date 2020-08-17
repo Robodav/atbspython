@@ -36,4 +36,5 @@ for i in range(len(fileNums)-1):
         oldPath = rootPath / f'{prefix}{renaming}{extension}'
         newPath = rootPath / f'{prefix}{fileNums[i] + 1}{extension}'
         print(f'Renaming {oldPath} to {newPath}')
-        shutil.move(oldPath, newPath) # uncomment after testing
+        # shutil.move(oldPath, newPath) # uncomment after testing
+        fileNums[i+1] = fileNums[i] + 1
