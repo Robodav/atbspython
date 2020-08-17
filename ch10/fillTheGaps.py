@@ -11,4 +11,8 @@ import re
 organizing = pyip.inputFilepath(prompt='Enter the folder to search:\n', mustExist=True)
 prefix = pyip.inputStr(prompt='Enter the prefix of each file:\n')
 
-# TODO: Loop through the directory, renaming files in the sequence
+# Loop through the directory, renaming files in the sequence
+files = os.listdir(organizing)
+for f in files:
+    if f.startswith(prefix):
+        print(f)
